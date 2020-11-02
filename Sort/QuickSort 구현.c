@@ -2,12 +2,17 @@
 #define arrayLen 10
 int quickSort[arrayLen] = {8, 5, 6, 2, 3, 7, 4, 9, 10, 1};
 int end;
+int left, right;
+int top, stack[arrayLen];
+	top = 0;
 
 int stackPush(int pushData){
-	int top, stack[arrayLen];
-	top = 0;
 	stack[top] = pushData;
 	top++;
+}
+int stackPop(){
+	return stack[top];
+	top--;
 }
 
 int show(int lengthEnd){
@@ -30,7 +35,6 @@ int Qsort(int Qleft, int Qright){
 	int pivot, i, j;
 	pivot = j = Qleft;
 	
-	
 	for(i=Qleft + 1; i<Qright; i++){
 		if(quickSort[pivot] > quickSort[i]){
 			j++;
@@ -38,7 +42,8 @@ int Qsort(int Qleft, int Qright){
 		}
 		if(i == Qright-1) {
 			Qright = j;
-			swap(&quickSort[pivot], &quickSort[j]);	
+			if(Qleft == j) Qleft++;
+			swap(&quickSort[pivot], &quickSort[j]);
 		}
 	}
 	
@@ -46,24 +51,20 @@ int Qsort(int Qleft, int Qright){
 	
 	printf("\n--------------------------------\n");
 	show(arrayLen);
+	
+	printf("Qleft의 값: %d", Qleft);
+	if(Qleft == 9) return 0;
+	Qsort(Qleft, 10);
 }
 
 
 void main(){
-	int left, right;
-	
 	
 	left = 0;
 	right = arrayLen;
 	
 	show(arrayLen);
-	
-	while(1){
-		printf("값 입력 start , end : ");
-		scanf("%d %d", &left, &right);
-		left --;
-		Qsort(left, right);
-	}
+	Qsort(left, right);
 	
 	
 
