@@ -31,6 +31,7 @@ int swap(int *inputA, int *inputB){
 	*inputB = temp;
 }
 
+
 int Qsort(int Qleft, int Qright){
 	int pivot, i, j;
 	pivot = j = Qleft;
@@ -54,6 +55,7 @@ int Qsort(int Qleft, int Qright){
 	if(Qleft == 9) return 0;
 	Qsort(Qleft, 10);
 }
+
 void main(){
 	
 	left = 0;
