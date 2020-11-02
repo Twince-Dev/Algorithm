@@ -5,6 +5,7 @@ int end;
 int left, right;
 int top, stack[arrayLen];
 	top = 0;
+
 // pivot 선택을 위한 stack 
 int stackPush(int pushData){
 	stack[top] = pushData;
