@@ -3,6 +3,13 @@
 int quickSort[arrayLen] = {8, 5, 6, 2, 3, 7, 4, 9, 10, 1};
 int end;
 
+int stackPush(int pushData){
+	int top, stack[arrayLen];
+	top = 0;
+	stack[top] = pushData;
+	top++;
+}
+
 int show(int lengthEnd){
 	int i;
 	
@@ -30,7 +37,7 @@ int Qsort(int Qleft, int Qright){
 			swap(&quickSort[j], &quickSort[i]);
 		}
 		if(i == Qright-1) {
-			end = j;
+			Qright = j;
 			swap(&quickSort[pivot], &quickSort[j]);	
 		}
 	}
@@ -51,8 +58,14 @@ void main(){
 	
 	show(arrayLen);
 	
-	Qsort(left, right);
-	Qsort(left+1, right);
+	while(1){
+		printf("값 입력 start , end : ");
+		scanf("%d %d", &left, &right);
+		left --;
+		Qsort(left, right);
+	}
+	
+	
 
 	//pivot 값을 잡는다.
 	//Qright는 배열의 끝을 의미한다. 
