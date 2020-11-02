@@ -6,14 +6,14 @@ int left, right;
 int top, stack[arrayLen];
 	top = 0;
 
-//int stackPush(int pushData){
-//	stack[top] = pushData;
-//	top++;
-//}
-//int stackPop(){
-//	return stack[top];
-//	top--;
-//}
+int stackPush(int pushData){
+	stack[top] = pushData;
+	top++;
+}
+int stackPop(){
+	return stack[top];
+	top--;
+}
 
 int show(int lengthEnd){
 	int i;
@@ -56,6 +56,8 @@ int Qsort(int Qleft, int Qright){
 	if(Qleft == 9) return 0;
 	Qsort(Qleft, 10);
 }
+
+
 void main(){
 	
 	left = 0;
@@ -63,6 +65,7 @@ void main(){
 	
 	show(arrayLen);
 	Qsort(left, right);
+	
 	
 
 	//pivot 값을 잡는다.
