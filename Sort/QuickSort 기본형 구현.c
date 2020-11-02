@@ -47,8 +47,6 @@ int Qsort(int Qleft, int Qright){
 		}
 	}
 	
-	printf("end : %d(시각적으로 봤을떄의 기준값: %d) / pivot : %d", end, end+1, quickSort[pivot]);
-	
 	printf("\n--------------------------------\n");
 	show(arrayLen);
 	

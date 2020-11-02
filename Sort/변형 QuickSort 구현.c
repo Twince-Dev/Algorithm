@@ -1,6 +1,6 @@
 #include <stdio.h>
 #define arrayLen 10
-int quickSort[arrayLen] = {8, 5, 6, 2, 3, 7, 4, 9, 10, 1};
+int quickSort[arrayLen] = {3, 6, 7, 1, 8, 4, 2, 9, 10, 5};
 int end;
 int left, right;
 int top, stack[arrayLen];
@@ -59,15 +59,9 @@ int Qsort(int Qleft, int Qright){
 
 
 void main(){
-	
 	left = 0;
 	right = arrayLen;
 	
 	show(arrayLen);
 	Qsort(left, right);
-	
-	
-
-	//pivot 값을 잡는다.
-	//Qright는 배열의 끝을 의미한다. 
 }
