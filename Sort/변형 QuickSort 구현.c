@@ -1,6 +1,6 @@
 #include <stdio.h>
 #define arrayLen 10
-int quickSort[arrayLen] = {3, 6, 7, 1, 8, 4, 2, 9, 10, 5};
+int quickSort[arrayLen] = {{3, 6, 7, 1, 8, 4, 2, 9, 10, 5};
 int end;
 int left, right;
 int top, stack[arrayLen];
