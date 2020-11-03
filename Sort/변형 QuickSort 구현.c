@@ -1,6 +1,6 @@
 #include <stdio.h>
 #define arrayLen 10
-int quickSort[arrayLen] = {8, 6, 10, 1, 7, 4, 2, 9, 3, 5};
+int quickSort[arrayLen] = {8, 5, 6, 2, 3, 7, 4, 9, 10, 1};
 int end;
 int left, right;
 int top, stack[arrayLen];
@@ -8,11 +8,12 @@ int top, stack[arrayLen];
 	
 int dlatl = 0;
 
- //pivot 선택을 위한 stack 
+// pivot 선택을 위한 stack 
 int stackPush(int pushData){
+	printf("값이 스택에 PUSH 됨-> 다음 for문의 끝값  : %d", stack[top]);
 	stack[top] = pushData;
 	top++;
-	printf("값이 스택에 PUSH 됨 : %d", stack[top]);
+	
 }
 int stackPop(){
 	return stack[top];
@@ -38,9 +39,7 @@ int swap(int *inputA, int *inputB){
 
 int Qsort(int Qleft, int Qright){
 	int pivot, i, j;
-	Qleft = stackPop();
 	pivot = j = Qleft;
-	
 	
 	for(i=Qleft + 1; i<Qright; i++){
 		if(quickSort[pivot] > quickSort[i]){
@@ -50,21 +49,23 @@ int Qsort(int Qleft, int Qright){
 		if(i == Qright-1) {
 			Qright = j;
 			stackPush(Qright + 1);
-			printf("\n Qright의 값: %d ,Qright 값이 PUSH 되었습니다", Qright);
+			top++;
+			
 			if(Qleft == j) Qleft++;
 			swap(&quickSort[pivot], &quickSort[j]);
 		}
 	}
-	
-	
+	Qleft = stackPop();
+
 	printf("\n--------------------------------\n");
 	show(arrayLen);
 
-	dlatl++;
-	if(dlatl == 9)
-		return 0;
+//	dlatl++;
+//	if(dlatl == 9)
+//		return 0;
 
 	printf("\n Qleft의 값: %d", Qleft);
+	printf("\n Qright의 값: %d", right);
 	if(Qleft == 9) return 0;
 	Qsort(Qleft, Qright);
 }
@@ -73,6 +74,7 @@ void main(){
 	left = 0;
 	right = arrayLen;
 	
+	printf("처음 Qright값 : %d \n", arrayLen);
 	show(arrayLen);
 	Qsort(left, right);
 }

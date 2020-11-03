@@ -64,7 +64,6 @@ void main(){
 	show(arrayLen);
 	Qsort(left, right);
 	
-
 	//pivot 값을 잡는다.
 	//Qright는 배열의 끝을 의미한다. 
 }
