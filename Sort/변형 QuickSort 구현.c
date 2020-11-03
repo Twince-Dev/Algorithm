@@ -1,19 +1,23 @@
 #include <stdio.h>
 #define arrayLen 10
-int quickSort[arrayLen] = {{3, 6, 7, 1, 8, 4, 2, 9, 10, 5};
+int quickSort[arrayLen] = {8, 6, 10, 1, 7, 4, 2, 9, 3, 5};
 int end;
 int left, right;
 int top, stack[arrayLen];
 	top = 0;
+	
+int dlatl = 0;
 
  //pivot 선택을 위한 stack 
 int stackPush(int pushData){
 	stack[top] = pushData;
 	top++;
+	printf("값이 스택에 PUSH 됨 : %d", stack[top]);
 }
 int stackPop(){
 	return stack[top];
 	top--;
+	printf("값이 POP 됨 : %d", stack[top]);
 }
 
 int show(int lengthEnd){
@@ -45,19 +49,24 @@ int Qsort(int Qleft, int Qright){
 		}
 		if(i == Qright-1) {
 			Qright = j;
-			stackPush(j+1);
-			printf("Qright의 값: ", Qright);
+			stackPush(Qright + 1);
+			printf("\n Qright의 값: %d ,Qright 값이 PUSH 되었습니다", Qright);
 			if(Qleft == j) Qleft++;
 			swap(&quickSort[pivot], &quickSort[j]);
 		}
 	}
-
+	
+	
 	printf("\n--------------------------------\n");
 	show(arrayLen);
 
-	printf("Qleft의 값: %d", Qleft);
+	dlatl++;
+	if(dlatl == 9)
+		return 0;
+
+	printf("\n Qleft의 값: %d", Qleft);
 	if(Qleft == 9) return 0;
-	Qsort(Qleft, 10);
+	Qsort(Qleft, Qright);
 }
 
 void main(){
