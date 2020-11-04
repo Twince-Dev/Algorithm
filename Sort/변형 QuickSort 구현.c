@@ -6,14 +6,14 @@ int left, right;
 int top, stack[10];
 	top = 0;
 
-//int stackPush(int pushData){
-//	stack[top] = pushData;
-//	top++;
-//}
-//int stackPop(){
-//	return stack[top];
-//	top--;
-//}
+int stackPush(int pushData){
+	stack[top] = pushData;
+	top++;
+}
+int stackPop(){
+	return stack[top];
+	top--;
+}
 
 int show(int lengthEnd){
 	int i;
