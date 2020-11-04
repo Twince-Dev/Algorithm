@@ -60,7 +60,8 @@ void main(){
 	
 	left = 0;
 	right = arrayLen;
-	
+
+
 	show(arrayLen);
 	Qsort(left, right);
 	
