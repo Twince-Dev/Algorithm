@@ -11,14 +11,15 @@ int dlatl = 0;
 // pivot 선택을 위한 stack 
 int stackPush(int pushData){
 	printf("값이 스택에 PUSH 됨-> 다음 for문의 끝값  : %d", stack[top]);
-	stack[top] = pushData;
 	top++;
+	stack[top] = pushData;
+	
 	
 }
 int stackPop(){
 	return stack[top];
-	top--;
 	printf("값이 POP 됨 : %d", stack[top]);
+	top--;
 }
 
 int show(int lengthEnd){
@@ -40,6 +41,8 @@ int swap(int *inputA, int *inputB){
 int Qsort(int Qleft, int Qright){
 	int pivot, i, j;
 	pivot = j = Qleft;
+	if(Qright - Qleft <= 3) Qleft = stackPop();
+	printf("\n Qright - Qleft : %d | POP된 값: %d\n", Qright-Qleft, Qleft);
 	
 	for(i=Qleft + 1; i<Qright; i++){
 		if(quickSort[pivot] > quickSort[i]){
@@ -60,9 +63,9 @@ int Qsort(int Qleft, int Qright){
 	printf("\n--------------------------------\n");
 	show(arrayLen);
 
-//	dlatl++;
-//	if(dlatl == 9)
-//		return 0;
+	dlatl++;
+	if(dlatl == 9)
+		return 0;
 
 	printf("\n Qleft의 값: %d", Qleft);
 	printf("\n Qright의 값: %d", right);
@@ -76,5 +79,7 @@ void main(){
 	
 	printf("처음 Qright값 : %d \n", arrayLen);
 	show(arrayLen);
+	
+	printf("첫 배열임\n\n\n\n");
 	Qsort(left, right);
 }
