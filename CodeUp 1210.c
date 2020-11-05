@@ -1,7 +1,7 @@
 #include <stdio.h>
 main()
 {
-	//1210 : Į�θ� ����ϱ� 
+	//1210 : Ä®·Î¸® °è»êÇÏ±â 
 	// Calculating Calories Using Arrangement
 	int menu[5]={ 400, 340, 170, 100, 70};
 	int input[2];
