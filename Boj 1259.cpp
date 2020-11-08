@@ -18,6 +18,7 @@ int main(){
 	//			printf("input[0] :%c", input[0]);
 	//			printf("\ninput[length end] :%c \n\n\n", input[(input.length()-i-1)]);
 	//			if(i == input.length()/2)
+	//			Debug 
 				situation = 0;
 				break;
 			}
