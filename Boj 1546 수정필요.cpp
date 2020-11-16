@@ -3,7 +3,7 @@
 using namespace std;
 
 int main(){
-	int input;
+	string input;
 	int i;
 	cin >> input;
 	
@@ -11,10 +11,12 @@ int main(){
 	
 	getline(cin, array);
 	
-	for(i=0; i<sizeof(array) / sizeof(array[0]); i++){
-		cout << array[i];
-//		if(isspace(array[i])
-	}
+//	for(i=0; i<sizeof(array) / sizeof(array[0]); i++){
+//		cout << array[i];
+////		if(isspace(array[i])
+//	}
+
+	for(i=0; i<sizeof(array) / sizeof(array[0]); i++) printf("%c", array[i]);
 	
 	 
 }
