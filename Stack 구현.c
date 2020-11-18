@@ -48,6 +48,7 @@ void main(){
 	int inputNum, command;
 	
 	while(1){
+//		system("cls");
 		printf("------------------------");
 		printf("\n명령어를 입력하세요 : ");
 		scanf("%d", &command);
@@ -70,6 +71,7 @@ void main(){
 			break;
 		}
 		check();
+//		Sleep(1000);
 	}	
 	return 0;
 }

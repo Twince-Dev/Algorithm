@@ -83,13 +83,13 @@ void main(){
 			rear--;
 			
 			printf("\n\n\nÇöÀç Å¥ : ");
-						for(i=0; i<sizeof(Queue) / sizeof(int); i++) {
-							if(Queue[i] == 0){
-								printf("[ ]");
-							}
-							else
-								printf("[%d]", Queue[i]);
-						}	
+				for(i=0; i<sizeof(Queue) / sizeof(int); i++) {
+					if(Queue[i] == 0){
+						printf("[ ]");
+					}
+					else
+						printf("[%d]", Queue[i]);
+				}	
 		    printf("\nfront : %d ,rear : %d ,\n\n________________________|\n\n",front ,rear); 	
 			}
 			
