@@ -13,6 +13,4 @@ int main(){
 		}	
 	printf("\n");
 	}
-	
-	
 }
