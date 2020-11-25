@@ -2,6 +2,7 @@
 #include <cstdio>
 
 using namespace std;
+
 int main(){
 	int number, value;
 	value = 0;
