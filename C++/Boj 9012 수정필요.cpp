@@ -14,7 +14,6 @@ int main(){
 	if(array[i] == "(" ) v.push(i);
 	if(array[i+1] == ")") v.pop()
 
-
 	//미완성 수정 필요 
 	// (별 가중치를 더해 스택으로 저장
 	// LIFO
