@@ -17,5 +17,4 @@ int main(){
 //	}
 
 	for(i=0; i<sizeof(array) / sizeof(array[0]); i++) printf("%c", array[i]);
-		 
 }
