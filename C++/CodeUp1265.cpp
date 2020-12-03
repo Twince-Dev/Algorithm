@@ -11,5 +11,5 @@ int main(){
 	for(i=1; i<10; i++){
 		printf("%d*%d=%d\n", input, i, input*i);
 	}
-	printf("\b ");
+	return 0;
 }
