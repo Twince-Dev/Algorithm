@@ -52,6 +52,7 @@ int show(){
 		
 	}
 }
+
 //int is_empty(s){}
 //int is_full(s){}
 
