@@ -8,6 +8,7 @@ int main(){
 	value = 0;
 	
 	cin >> number;
+	
 	char array[number];
 	
 	scanf("%[^\n]\n", array);
