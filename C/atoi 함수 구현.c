@@ -2,46 +2,46 @@
 #include <stdlib.h>
 //#include <stdbool.h> 
 int main(){
-	char array[30] = "abc123";
+	char array[30] = "123abc";
 	int i, j, n, output, temp;
 	
 	temp = strlen(array);
 	
 	
-	printf("ìƒì„±ëœ ë¬¸ìì—´ : %s", array);
-	printf("\ntempì˜ ê¸¸ì´ : %d \n", temp);
+	printf("»ı¼ºµÈ ¹®ÀÚ¿­ : %s", array);
+	printf("\ntempÀÇ ±æÀÌ : %d \n", temp);
 	
 	for(i=0; i<strlen(array); i++){
 		if((int)array[i] < 48 || (int)array[i] > 57){
-			printf("\n\nì¼ë°˜ë¬¸ì ê²€ì¶œ : %c", array[i]);
+			printf("\n\nÀÏ¹İ¹®ÀÚ °ËÃâ : %c", array[i]);
 			temp = i;
 			break;
 		}
 	}
-	printf("ë°”ë€ tempì˜ ê¸¸ì´: %d", temp);
+	printf("¹Ù²ï tempÀÇ ±æÀÌ: %d", temp);
 	
 	for(i=0; i<strlen(array); i++){			
 		n = 1; 
-//		if(array[i] == '\0') -> ì‚¬ìš©í•œ ë°°ì—´ê¹Œì§€ë§Œ forë¬¸ ì‘ë™ : ì‚¬ìš©ì•ˆí•´ë„ ë¨ 
+//		if(array[i] == '\0') -> »ç¿ëÇÑ ¹è¿­±îÁö¸¸ for¹® ÀÛµ¿ : »ç¿ë¾ÈÇØµµ µÊ 
 		n *= 1;
 		for(j=1; j<temp; j++){
 			n *= 10;
 		}
-		printf("\nn ê°’ : %d  ", n);
+		printf("\nn °ª : %d  ", n);
 		printf("\n----------");
 		temp--;
 		
 		if(temp < 0 || ((int)array[i] < 48 || (int)array[i] > 57)) break;
-		printf("ë”í•´ì§€ëŠ” ë¬¸ìì—´ : %d",(((int)(array[i]))-48)*n);
+		printf("´õÇØÁö´Â ¹®ÀÚ¿­ : %d",(((int)(array[i]))-48)*n);
 		output += (((int)(array[i]))-48)*n;
 	}
 	
-	printf("\n\nintí˜•ìœ¼ë¡œ ë³€í™˜ëœ ë¬¸ìì—´ : %d", output-3);
+	printf("\n\nintÇüÀ¸·Î º¯È¯µÈ ¹®ÀÚ¿­ : %d", output);
 	
-	//tempê°’ì„ ê°€ì ¸ì„œ forë¬¸ì„ ë°˜ë³µí• ìˆ˜ë¡ 10ì”© ê³±í•´ì§€ê²Œ ë§Œë“¤ê¸°.
-	//ë¬¸ìì—´ ê¸¸ì´ë¥¼ êµ¬í•´ì„œ 10ì˜ nìŠ¹ê³±. 
-	//nullê°’ ë§Œë‚˜ë©´ break; 
-	// ì´ì¤‘forë¬¸ìœ¼ë¡œ
+	//temp°ªÀ» °¡Á®¼­ for¹®À» ¹İº¹ÇÒ¼ö·Ï 10¾¿ °öÇØÁö°Ô ¸¸µé±â.
+	//¹®ÀÚ¿­ ±æÀÌ¸¦ ±¸ÇØ¼­ 10ÀÇ n½Â°ö. 
+	//null°ª ¸¸³ª¸é break; 
+	// ÀÌÁßfor¹®À¸·Î
 	
 	// 48(int) = 0(char)
 	// 49(int) = 1(char)
