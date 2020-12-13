@@ -2,6 +2,7 @@
 #include <cstdio>
 
 using namespace std;
+
 int main(){
 	int array[9];
 	int i, max, value;
