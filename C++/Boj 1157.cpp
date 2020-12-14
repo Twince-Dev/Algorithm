@@ -7,8 +7,9 @@ using namespace std;
 //a는65부터 시작한다. 
 int main(){
 	int i, j;
-	string input;
 	int alpabet[26] = { 0, };	
+	
+	string input;
 	
 	cin >> input;
 	
