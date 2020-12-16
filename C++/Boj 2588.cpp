@@ -22,9 +22,5 @@ int main(){
 		cout << number1[i] << "\n";
 		cout << number2[i]	<< "\n";
 	} 
-	
-	
-
-	
 		
 }
